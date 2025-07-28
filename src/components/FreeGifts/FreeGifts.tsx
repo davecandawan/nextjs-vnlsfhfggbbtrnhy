@@ -121,7 +121,7 @@ const FreeGifts: React.FC = () => {
   }, [handleInteraction, moveSlide]);
 
   return (
-    <div className="w-full flex flex-col items-center mt-8 px-0">
+    <div className="w-full flex flex-col items-center mt-2 mb-8 px-0">
       <div className="relative w-screen sm:w-full sm:max-w-4xl overflow-hidden">
         <button
           className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-11 h-11 p-0 flex items-center justify-center bg-[#333] hover:bg-black font-bold text-2xl rounded-full shadow-2xl"
@@ -136,16 +136,19 @@ const FreeGifts: React.FC = () => {
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {slides.map((slide, idx) => (
-            <div key={slide.src} className="min-w-full flex items-center justify-center w-screen sm:w-auto">
+            <div
+              key={slide.src}
+              className="min-w-full flex items-center justify-center w-screen sm:w-auto"
+            >
               <div className="w-full h-full flex items-center justify-center">
-              <Image
-                src={slide.src}
-                alt={slide.alt}
-                width={1280}
-                height={640}
-                className="object-contain bg-white w-full h-auto max-h-[70vh]"
-                {...(idx === 0 ? { priority: true } : { loading: 'lazy' })}
-              />
+                <Image
+                  src={slide.src}
+                  alt={slide.alt}
+                  width={1280}
+                  height={640}
+                  className="object-contain bg-white w-full h-auto max-h-[70vh]"
+                  {...(idx === 0 ? { priority: true } : { loading: 'lazy' })}
+                />
               </div>
             </div>
           ))}
