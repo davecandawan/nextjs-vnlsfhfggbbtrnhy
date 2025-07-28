@@ -15,13 +15,14 @@ const PackageSelection: React.FC = () => {
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
       <div className="flex flex-wrap justify-center items-center gap-6 mt-8">
         {/* Starter Package */}
-        <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 w-[320px] flex flex-col order-3 lg:order-1">
-          <div className="relative w-full h-auto overflow-hidden bg-white aspect-square">
+        <div className="bg-white rounded-2xl shadow-md overflow-hidden border-2 border-[#f7ee30] w-[320px] flex flex-col order-3 lg:order-1">
+          <div className="relative w-full h-95 overflow-hidden bg-white flex items-center justify-center">
             <Image
               src="/contentimages/StarterMobileU.webp"
               alt="Starter Package"
-              fill
-              className="object-contain object-top"
+              width={360}
+              height={360}
+              className="object-contain object-center w-auto h-full"
               priority
             />
           </div>
@@ -33,7 +34,7 @@ const PackageSelection: React.FC = () => {
             <div className="text-black font-bold text-xl mb-2 text-center pt-2">
               You Saved $159.00
             </div>
-            <div className="text-black text-center mb-4 text-xl">(Pick Your Caliber)</div>
+            <div className="text-black text-center mb-0 text-xl">(Pick Your Caliber)</div>
             <div className="mb-1 -ml-6">
               <ul className="list-none p-0 m-0">
                 <li className="flex items-start bg-black text-white px-3 py-0.5 rounded mb-2">
@@ -44,7 +45,7 @@ const PackageSelection: React.FC = () => {
             </div>
             <div className="mt-auto">
               <a
-                href={getCheckoutUrl('https://secure.vnsh.com/vnlsfhgbbtrnhy/starter-checkout')}
+                href={getCheckoutUrl('https://secure.vnsh.com/vnlsfhfggbbtrnhy/starter-checkout')}
                 target="_self"
                 rel="noopener noreferrer"
                 className="block w-full"
@@ -78,13 +79,14 @@ const PackageSelection: React.FC = () => {
         </div>
 
         {/* Ultimate Package */}
-        <div className="bg-white rounded-2xl shadow-md overflow-hidden border-[3px] border-[#a3a0a0] w-[320px] flex flex-col order-1 lg:order-2">
-          <div className="relative w-full h-96 overflow-hidden bg-[#ededed]">
+        <div className="bg-white rounded-2xl shadow-md overflow-hidden border-[3px] border-[#04a1ba] w-[320px] flex flex-col order-1 lg:order-2">
+          <div className="relative w-full h-95 overflow-hidden bg-[#ededed] flex items-center justify-center">
             <Image
               src="/contentimages/AdvancedMobileU2.webp"
               alt="Ultimate Package"
-              fill
-              className="object-contain -mt-[15px] md:-mt-[15px]"
+              width={360}
+              height={360}
+              className="object-contain object-center w-auto h-full"
               priority
             />
           </div>
@@ -100,7 +102,7 @@ const PackageSelection: React.FC = () => {
               <ul className="list-none p-0 m-0">
                 <li className="flex items-start bg-black text-white px-3 py-0.5 rounded mb-2">
                   <span className="text-white mr-2 text-base">+</span>
-                  <span className="text-base">
+                  <span className="text-[15px]">
                     All Calibers <span className="text-sm">(9mm, .380, .40 & .45)</span>
                   </span>
                 </li>
@@ -121,7 +123,7 @@ const PackageSelection: React.FC = () => {
 
             <div className="mt-auto">
               <a
-                href={getCheckoutUrl('https://secure.vnsh.com/vnlsfhgbbtrnhy/advanced-checkout')}
+                href={getCheckoutUrl('https://secure.vnsh.com/vnlsfhfggbbtrnhy/advanced-checkout')}
                 target="_self"
                 rel="noopener noreferrer"
                 className="block w-full"
@@ -155,13 +157,14 @@ const PackageSelection: React.FC = () => {
         </div>
 
         {/* Enhanced Package */}
-        <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 w-[320px] flex flex-col order-2">
-          <div className="relative w-full h-96 overflow-hidden bg-white">
+        <div className="bg-white rounded-2xl shadow-md overflow-hidden border-2 border-[#f7ee30] w-[320px] flex flex-col order-2">
+          <div className="relative w-full h-95 overflow-hidden bg-white flex items-center justify-center">
             <Image
               src="/contentimages/EnhancedMobileU2.webp"
               alt="Enhanced Package"
-              fill
-              className="object-contain -mt-4 md:-mt-4"
+              width={360}
+              height={360}
+              className="object-contain object-center w-auto h-full"
               priority
             />
           </div>
@@ -173,7 +176,7 @@ const PackageSelection: React.FC = () => {
             <div className="text-black font-bold text-xl mb-2 text-center pt-2">
               You Saved $207.89
             </div>
-            <div className="text-black text-center mb-4 text-xl">(Pick Your Caliber)</div>
+            <div className="text-black text-center mb-0 text-xl">(Pick Your Caliber)</div>
             <div className="mb-4 -ml-6">
               <ul className="list-none p-0 m-0">
                 <li className="flex items-start bg-black text-white px-3 py-0.5 rounded mb-2">
@@ -193,7 +196,7 @@ const PackageSelection: React.FC = () => {
 
             <div className="mt-auto">
               <a
-                href={getCheckoutUrl('https://secure.vnsh.com/vnlsfhgbbtrnhy/enhanced-checkout')}
+                href={getCheckoutUrl('https://secure.vnsh.com/vnlsfhfggbbtrnhy/enhanced-checkout')}
                 target="_self"
                 rel="noopener noreferrer"
                 className="block w-full"

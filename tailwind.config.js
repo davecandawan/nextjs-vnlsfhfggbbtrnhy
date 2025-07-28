@@ -32,6 +32,8 @@ module.exports = {
         },
       },
       colors: {
+        bannerbg: '#04a1ba',
+        bannertext: '#f7ee30',
         custom: {
           green: '#2afe4e',
         },

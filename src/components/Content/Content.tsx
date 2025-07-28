@@ -1,12 +1,12 @@
 import React, { useCallback } from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import CallToActionButton from '../UI/CallToActionButton';
 import PackageSelection from '../PackageSelection/PackageSelection';
-import Faqs from '../Faqs/Faqs';
 import StickyBanner from '../StickyBanner/StickyBanner';
 import Reviews from '../Reviews/Reviews';
 import AddToCartButton from '../AddToCartButton/AddToCartButton';
+import { primaryFont } from '@/app/fonts';
+import FreeGifts from '../FreeGifts/FreeGifts';
 
 const Slideshow = dynamic(() => import('../Slideshow/Slideshow'), {
   ssr: false,
@@ -17,7 +17,7 @@ const Content: React.FC = () => {
   return (
     <div className="min-h-screen bg-[url('/bg.webp')] bg-cover bg-fixed bg-repeat bg-center">
       <div className="w-full bg-[url('/bg.webp')] bg-cover bg-fixed bg-repeat bg-center">
-        <div className="w-full max-w-[1240px] mx-auto pt-5 lg:px-20 bg-white">
+        <div className="w-full max-w-[1240px] mx-auto pt-0 lg:px-20 bg-white">
           <Slideshow />
         </div>
       </div>
@@ -111,7 +111,9 @@ const Content: React.FC = () => {
           </div>
           <header className="text-center pb-1 -mb-6 md:mb-0 md:pt-1">
             <h1 className="text-3xl sm:text-3xl md:text-[46px] font-medium leading-[1] md:leading-tight mb-0 px-2">
-              <div className="font-jawbreak uppercase">LOVE IT OR YOU DON'T PAY A DIME!</div>
+              <div className={`font-jawbreak uppercase ${primaryFont.className}`}>
+                LOVE IT OR YOU DON'T PAY A DIME!
+              </div>
             </h1>
           </header>
           <div className="mt-1 mb-8">
@@ -164,7 +166,7 @@ const Content: React.FC = () => {
 
           <header id="benefits" className="text-center pb-1 -mb-6 md:mb-0 md:pt-1">
             <h1 className="text-3xl sm:text-3xl md:text-[46px] font-medium leading-[1] md:leading-tight mb-4 px-2">
-              <div className="font-jawbreak uppercase">
+              <div className={`font-jawbreak uppercase ${primaryFont.className}`}>
                 Why This System Ensures You{' '}
                 <span className="text-[#ff0000] underline">
                   Make The One Shot You Can't Afford To Miss
@@ -236,7 +238,7 @@ const Content: React.FC = () => {
           </div>
           <header className="text-center pt-2 pb-1 -mb-6 md:mb-0 md:pt-4">
             <h1 className="text-3xl sm:text-3xl md:text-[46px] font-medium leading-[1] md:leading-tight mb-0 px-2">
-              <div className="font-jawbreak uppercase">
+              <div className={`font-jawbreak uppercase ${primaryFont.className}`}>
                 <span className="text-[#ff0000]">Limited Free Bonus Gift (Worth $80)</span> Get Our
                 "World's Comfiest" Holster Free!
               </div>
@@ -296,7 +298,7 @@ const Content: React.FC = () => {
               all your guns* (will not work with most weapon lights).
             </p>
           </div>
-          <div className="w-full md:w-[85%] mx-auto max-w-[1120px] px-0 md:px-0 md:py-5">
+          <div className="w-full md:w-[85%] mx-auto max-w-[1120px] px-0 md:px-0 md:py-3">
             <Image
               src="/contentimages/VNSH-BlackHolster-BlockImages-V2-Desktop.webp"
               alt="VNSH Black Holster"
@@ -306,31 +308,62 @@ const Content: React.FC = () => {
               priority
             />
           </div>
+          <div className="w-full md:w-[85%] mx-auto max-w-[1120px] px-0 md:px-0 md:py-0">
+            <Image
+              src="/contentimages/VNSH_LaserStrike_1DesktopNew.webp"
+              alt="VNSH Black Holster"
+              className="w-full h-auto"
+              width={1120}
+              height={600}
+              priority
+            />
+          </div>
           <header className="text-center pt-2 pb-1 -mb-6 md:mb-0 md:py-4">
-            <h1 className="text-3xl sm:text-3xl md:text-[46px] font-medium leading-[1] md:leading-tight mb-0 px-2">
-              <div className="font-jawbreak uppercase">
-                Plus... You're Getting An Iron-Clad, Money-Back Guarantee
+            <h1 className="text-3xl sm:text-3xl md:text-[40px] font-medium leading-[1] md:leading-tight mb-0 px-2">
+              <div className={`font-jawbreak uppercase ${primaryFont.className}`}>
+                <span className="text-[#f7ee30] bg-[#04a1ba] px-2">
+                  Plus... YOU’RE Guaranteed To Get $70-$220 in FREE Gifts!
+                </span>
               </div>
             </h1>
+            <FreeGifts />
           </header>
-          <div className="space-y-6">
-            <div className="w-4/5 md:w-[30%] mx-auto px-4 md:px-0">
-              <Image
-                src="/contentimages/VNSH_MONEY-BACK.webp"
-                alt="VNSH Holster deal"
-                className="w-full h-auto"
-                width={1120}
-                height={600}
-                priority
-              />
-            </div>
+          <div className="relative">
             <div className="font-inter">
-              <p>Love everything about your order, or we’ll refund you every penny.</p>
-              <p>It’s that simple.</p>
+              <p>The reason we're doing this is simple.</p>
               <p>
-                If you aren’t totally thrilled, all you have to do is contact our US-Based Support
+                Adam, founder and President decided he's putting all of his focus on VNSH now we are
+                giving away FREE survival products with every order.
+              </p>
+              <p>You will get at least $70 worth of Free Gear!</p>
+              <div className="md:float-right md:ml-6 md:mb-4 w-full md:w-[30%] max-w-xs mx-auto md:mx-0">
+                <Image
+                  src="/contentimages/VNSH_MONEY-BACK.webp"
+                  alt="VNSH Holster deal"
+                  className="w-full h-auto"
+                  width={1120}
+                  height={600}
+                  priority
+                />
+              </div>
+              <p>No catch.</p>
+              <p>
+                We know you'll love this gear as it will add an extra layer of protection for you
+                and your family.
+              </p>
+              <p>
+                And it's yours to keep...even if you end up returning your Laser Strike and Free
+                holster. about your order, or we'll refund you every penny.
+              </p>
+              <p>It's that simple.</p>
+              <p>
+                If you aren't totally thrilled, all you have to do is contact our US-Based Support
                 Team within 60 days to get a full refund.
               </p>
+            </div>
+            <div className="clear-both"></div>
+
+            <div className="font-inter">
               <p className="font-bold">
                 Plus, we also give you a 2-year workmanship guarantee as well!
               </p>
@@ -344,6 +377,7 @@ const Content: React.FC = () => {
                   fastest, easiest way to become a dead accurate shooter…
                 </span>
               </p>
+              <p>Plus… get a FREE VNSH Holster with it…</p>
               <p id="package-selection" className="text-lg md:text-xl font-medium mb-8">
                 Then you owe it to yourself to grab this deal now!
               </p>
@@ -358,9 +392,9 @@ const Content: React.FC = () => {
               <PackageSelection />
             </div>
 
-            <header id="faqs" className="text-center pt-2 pb-1 -mb-6 md:mb-0 md:py-4">
-              <h1 className="text-3xl sm:text-3xl md:text-[46px] leading-[1] md:leading-tight mb-0 px-2">
-                <div className="font-jawbreak uppercase font-bold [text-shadow:0.5px_0_0_black]">
+            <header id="faqs" className="text-center pt-2 pb-10 -mb-6 md:mb-0 md:py-4">
+              <h1 className="text-3xl sm:text-3xl md:text-[46px] font-medium leading-[1] md:leading-tight mb-0 px-2">
+                <div className={`font-jawbreak uppercase ${primaryFont.className}`}>
                   Frequently Asked Questions
                 </div>
               </h1>
