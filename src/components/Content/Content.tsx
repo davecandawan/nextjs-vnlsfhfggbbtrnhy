@@ -326,8 +326,12 @@ const Content: React.FC = () => {
                 </span>
               </div>
             </h1>
-            <FreeGifts />
           </header>
+
+          <div className="w-screen -ml-5 sm:mx-auto sm:w-full sm:max-w-[100vw] pt-0 bg-white overflow-hidden">
+            <FreeGifts />
+          </div>
+
           <div className="relative">
             <div className="font-inter">
               <p>The reason we're doing this is simple.</p>

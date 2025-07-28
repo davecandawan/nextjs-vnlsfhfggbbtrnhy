@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Slideshow: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-    const slides = [
+  const slides = [
     {
       image: '/contentimages/VNSH_LaserStrike_HeroDesktop.webp',
       alt: 'Hero slide',
@@ -72,14 +72,26 @@ const Slideshow: React.FC = () => {
         </div>
         {/* Carousel */}
         <div className="flex-1 flex items-center justify-center h-full">
-          <div className="relative w-full overflow-hidden p-0 m-0 mb-0 pb-0" style={{ padding: 0, margin: 0, marginBottom: 0, paddingBottom: 0 }}>
+          <div
+            className="relative w-full overflow-hidden p-0 m-0 mb-0 pb-0"
+            style={{ padding: 0, margin: 0, marginBottom: 0, paddingBottom: 0 }}
+          >
             <div
               className="flex transition-transform duration-500 ease-in-out w-full"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {slides.map((slide, index) => (
                 <div key={index} className="w-full flex-shrink-0">
-                  <div style={{ transform: index === 1 ? 'scale(0.90)' : undefined, display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%' }}>
+                  <div
+                    style={{
+                      transform: index === 1 ? 'scale(0.90)' : undefined,
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      width: '100%',
+                      height: '100%',
+                    }}
+                  >
                     <img
                       src={slide.image}
                       alt={slide.alt}
